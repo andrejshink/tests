@@ -102,19 +102,17 @@ public:
     }
     int find(const char *str)
     {
-        if(*str == 0)
-        {
-            return size;
-        }
-            
         Node *tmp = head;
         while(tmp)
         {
             if(tmp->sym == *str)
             {
-                if(str[1] == 0)
+                if(str[1] == 0 )
                 {
-                    return size;
+                    if(tmp->lst)
+                        return tmp->lst->size;
+                    else
+                        return size;
                 }
                 else
                     return tmp->lst->find(++str);
@@ -126,7 +124,7 @@ public:
     }
 };
 
-
+/*
 int main()
 {
     List *lst = new List();
@@ -139,4 +137,14 @@ int main()
     std::cout <<lst->del("a.shinkaruk@samsung.com") <<std::endl;
     std::cout <<lst->del("a.shinkaruk@samsung.com") <<std::endl;
     return 0;
+}*/
+
+List *lst  = 0;
+void init(){lst = new List();}
+void add(const char *email){lst->add(email);}
+void del(const char *email){lst->del(email);}
+int find(const char *prefix)
+{
+    std::cout <<lst->find(prefix) <<std::endl;
+	    return lst->find(prefix);
 }
