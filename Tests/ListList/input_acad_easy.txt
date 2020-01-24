@@ -1,0 +1,41 @@
+15
+  
+[MAN]
+   add abc@samsung.com
+   find abc@samsung.com 1
+   add defgh@samsung.com
+   add aaa@samsung.com
+   del x
+   find a 2
+   find ab 1
+   add b.willis@gmail.com
+   find b 1
+   add b.willis@gmail.com
+   find b 1
+   del abc@samsung.com
+   find a 1
+   add abc@samsung.com
+   find abc@ 1
+   del b.willis@gmail.com
+   find b. 0
+   add b.clinton@gmail.com
+   find b 1
+   find b.c 1
+   find b.w 0
+   find b.clinton@gmail.com 1
+   halt
+
+[RND] 111 10 20  10
+[RND] 222 20 20  20
+[RND] 333 30 50  49
+[RND] 444 40 200  159
+[RND] 86119 50 20000  37966
+[RND] 40282 50 20000  40073
+[RND] 37570 50 20000  39835
+[RND] 27096 50 20000  39139
+[RND] 96910 50 20000  36144
+[RND] 97399 50 20000  41233
+[RND] 76179 50 20000  39145
+[RND] 25104 50 20000  39175
+[RND] 96863 50 20000  41799
+[RND] 15358 50 20000  40770
