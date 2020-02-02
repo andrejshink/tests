@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 typedef unsigned int uint;
 static uint seed;
 static uint mrand(uint num)
@@ -194,11 +193,12 @@ bool test()
     printf("Error %s\n", method);
     return false;
 }
-
+#include<iostream>
 int main()
 {
+	std::cout << "safsdfsda" << std::endl;
     setbuf(stdout, NULL);
-    freopen("./input_acad_easy.txt", "r", stdin);
+    freopen("../../repos/tests/Tests/ListList/input_acad_easy.txt", "r", stdin);
     int ntests = 0;
     scanf("%i", &ntests);
     for (int t = 1; t <= ntests; ++t)

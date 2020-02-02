@@ -1,5 +1,21 @@
 1
-  
+[MAN]
+   add a
+   add aa 
+   add a1
+   del aa
+   add aa
+   del a1
+   del aa
+   del a
+   add b
+   add bb
+   add bbb
+   del b
+   add b
+   find b 3
+   halt
+
 [MAN]
    add abc@samsung.com
    find abc@samsung.com 1
@@ -29,7 +45,7 @@
 [RND] 222 20 20  20
 [RND] 333 30 50  49
 [RND] 444 40 200  159
-[RND] 86119 50 20000  37966l
+[RND] 86119 50 20000  37966
 [RND] 40282 50 20000  40073
 [RND] 37570 50 20000  39835
 [RND] 27096 50 20000  39139

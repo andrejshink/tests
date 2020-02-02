@@ -17,12 +17,13 @@ public:
     {
         if(*str == 0)
         {
+			size++;
             return;
         }
         if(!head)
         {
             head = new Node;
-            size = 1;
+            size++;
             head->sym = *str;
             head->next = 0;
             head->lst = new List;
@@ -107,12 +108,11 @@ public:
         {
             if(tmp->sym == *str)
             {
+				//std::cout << "F" << tmp->lst->size << std::endl;
                 if(str[1] == 0 )
                 {
-                    if(tmp->lst)
+					if(tmp->lst)
                         return tmp->lst->size;
-                    else
-                        return size;
                 }
                 else
                     return tmp->lst->find(++str);
@@ -141,10 +141,13 @@ int main()
 
 List *lst  = 0;
 void init(){lst = new List();}
-void add(const char *email){lst->add(email);}
+void add(const char *email){
+	if(!lst->find(email))
+		lst->add(email);
+}
 void del(const char *email){lst->del(email);}
 int find(const char *prefix)
 {
-    std::cout <<lst->find(prefix) <<std::endl;
+    //std::cout <<lst->find(prefix) <<std::endl;
 	    return lst->find(prefix);
 }
